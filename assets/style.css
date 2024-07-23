@@ -29,7 +29,20 @@ h3 {
     font-size: 200%;
 }
 
-form {
+main {
     display: flex;
-    font-size: 200%;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.seperator {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
