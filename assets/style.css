@@ -46,3 +46,9 @@ main {
     justify-content: space-between;
     flex-direction: column;
 }
+
+.bigGuy {
+    display: flex;
+    min-height: 180px;
+    max-height: 800px;
+}
