@@ -29,12 +29,6 @@ h3 {
     font-size: 200%;
 }
 
-main {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-}
-
 .seperator {
     display: flex;
     justify-content: space-between;
@@ -43,12 +37,46 @@ main {
 
 .list {
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
+    font-size: 100%;
+    gap: 30px;
+    position: relative;
+    top: 100px;
 }
 
 .bigGuy {
     display: flex;
     min-height: 180px;
     max-height: 800px;
+}
+
+.mind {
+    display: flex;
+    font-size: 200%;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    gap: 10px;
+}
+
+textarea {
+    width: 815px;
+    height: 80px;
+}
+
+.blogMan {
+    width: 815px;
+}
+
+.submit {
+    width: 815px;
+    padding: 20px;
+    font-size: 100%;
+    background-color: black;
+    color: white
+}
+
+h4 {
+    position: relative;
+    top: 100px;
 }
