@@ -13,11 +13,9 @@
 </header>
 <body>
     <section>
-        <div class="box">Blog Title</div>
-        <div class="box">Title 1</div>
-        <div class="box">Title 2</div>
-        <div class="box">Title 3</div>
-        <div class="box">Here is the Title</div>
+        <div class="box">Blog Title <span id="blogTitle"></span>/div>
+        <div class="box">Blog Title <span id="blogAuthor"></span>/div>
+        <div class="box">Blog Title <span id="blogContent"></span>/div>
     </section>
     <footer>
         <div class="footer">
@@ -28,5 +26,16 @@
         </div>
     </footer>
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const blogAuthor = localStorage.getItem('blogAuthor');
+            const blogTitle = localStorage.getItem('blogTitle');
+            const blogContent = localStorage.getItem('blogContent');
+        
+            document.getElementById('blogAuthor').textContent = blogAuthor;
+            document.getElementById('blogTitle').textContent = blogTitle;
+            document.getElementById('blogContent').textContent = blogContent;
+        });
+    </script>
 </body>
+</html>

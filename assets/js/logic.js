@@ -1,9 +1,19 @@
-const bigGuy = document.querySelector('#bigGuy')
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('.list')
 
-bigGuy.addEventListener('submit', function (event) {
-    event.preventDefault();
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+    
+        const author = document.querySelector('#blog-author').value;
+        const title = document.querySelector('#blog-title').value;
+        const content = document.querySelector('#blog-content').value;
 
-    const authorOf = bigGuy.querySelector('#blog-author').value;
-    const titleOf = bigGuy.querySelector('#blog-title').value;
-    const contentOF = bigGuy.querySelector('#blog-content').value;
-})
+        // Save the data above into localStorage
+        localStorage.setItem('blogAuthor',author);
+        localStorage.setItem('blogTitle',title);
+        localStorage.setItem('blogContent',content);
+
+        // redirect to blog.html
+        window.location.href = 'blog.html'
+    });
+});
