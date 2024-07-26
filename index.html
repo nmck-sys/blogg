@@ -6,35 +6,37 @@
   <title>Noah's Blog</title>
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
-<header>
+<body>
+  <header>
     <h1 id="tinySun">☀️</h1>
     <h2>My First Blog!!</h2>
     <h3 id="tinySun">☀️</h3>
-</header>
+  </header>
 
-    <body>
-        <div id="theme-conainter" class = "structure">
+  <div id="theme-container" class="structure">
+    <div id="blog-sheet" class="separator">
+      <section>
+        <div class="mind">
+            <div class="bigGuy">
+                <img src="./assets/blue_chinese_dragon.jpg" alt="dragon drawing">
+              </div>
+            <form class="list" id="blog-form">
+              <label for="blog-author" class="label">Username:</label>
+              <input type="text" id="blog-author" class="blogMan" name="author">
+              
+              <label for="blog-title" class="label">Title:</label>
+              <input type="text" id="blog-title" class="blogMan" name="title">
+              
+              <label for="blog-content" class="label">Content:</label>
+              <textarea id="blog-content" name="content"></textarea>
+              
+              <button type="submit" class="submit">Submit</button>
+            </form>
+          </div>
+      </section>
+    </div>
+  </div>
 
-                    <div id="blog-sheet" class ="seperator">
-                        <section>
-                            <div class="bigGuy">
-                            <img src="./assets/blue_chinese_dragon.jpg" alt="dragon drawing">
-                        </div>
-                        </section>
-                        <div class="mind">
-                            <h4>What's on your mind?</h4>
-                        <form class="list">
-                            <label for="" class="label">Username:</label>
-                            <input type="text" id="'blog-author" class="blogMan" name="blog-author">
-                            <label for="blog-title" class="label">Title:</label>
-                            <input type="text" id="blog-title" class ="blogMan" name="blog-title">
-                            <label for="blog-content" class="label">Content:</label>
-                            <textarea id="blog-content" name="blog-content"></textarea>
-                            <button type="submit" class="submit">Submit</button>
-                        </form>
-                    </div> 
-                </div>
-            </div>
-        <script src="./assets/js/logic.js"></script>
-    </body>
+  <script src="./assets/js/logic.js"></script>
+</body>
 </html>

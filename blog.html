@@ -6,35 +6,28 @@
   <title>Noah's Blog</title>
   <link rel="stylesheet" href="./assets/css/form.css" />
 </head>
-<header>
-    <h1>☀️</h1>
-    <h2>My first title</h2>
-    <h3>☀️</h3>
-</header>
 <body>
+    <header>
+        <h1>☀️</h1>
+        <h2 class="display-title"> My First Blog</h2>
+        <h3>☀️</h3>
+    </header>
     <section>
-        <div class="box">Blog Title <span id="blogTitle"></span>/div>
-        <div class="box">Blog Title <span id="blogAuthor"></span>/div>
-        <div class="box">Blog Title <span id="blogContent"></span>/div>
+        <div class="box"><strong>Blog Title:</strong> <span class="display-title"></span></div>
+        <div class="box"><strong>Author:</strong> <span id="display-author"></span></div>
+        <div class="box"><strong>Content:</strong> <span id="display-content"></span></div>
     </section>
-    <footer>
-        <div class="footer">
-            <li class="bottomText">Made with Love</li>
-            <li class="bottomText">Portfolio:</li>
-            <li class="bottomText">Blog:</li>
-            <li class="bottomText">Email:</li>
-        </div>
-    </footer>
-
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const blogAuthor = localStorage.getItem('blogAuthor');
-            const blogTitle = localStorage.getItem('blogTitle');
-            const blogContent = localStorage.getItem('blogContent');
-        
-            document.getElementById('blogAuthor').textContent = blogAuthor;
-            document.getElementById('blogTitle').textContent = blogTitle;
-            document.getElementById('blogContent').textContent = blogContent;
+            const author = localStorage.getItem('blogAuthor');
+            const title = localStorage.getItem('blogTitle');
+            const content = localStorage.getItem('blogContent');
+
+            document.getElementById('display-author').textContent = author;
+            document.querySelectorAll('.display-title').forEach(element => {
+                element.textContent = title;
+            });
+            document.getElementById('display-content').textContent = content;
         });
     </script>
 </body>
